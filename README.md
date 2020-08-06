@@ -32,6 +32,7 @@ export LD_PRELOAD=/data/local/tmp/libEsodbg.so
 ```
                 hook->set_hook("0x10E50",(void *)print_key); //hook text段内部，将key打印出来
 ```
+如果某片段运行需要的变量没有被成功加载，那么可以使用hook->set_memory来手动设置
 完整的代码示例见main.cpp。注意目标so的架构，则编译对应的架构然后上传到android模拟器上利用IDA调试即可。变得跟调试linux下程序一样方便。
 
 hook android so and debug it easily with no need to run the apk!!
